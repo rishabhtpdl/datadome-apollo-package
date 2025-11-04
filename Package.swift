@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "DataDomeApollo",
     platforms: [
-        .iOS(.v15),
+        .iOS(.v15)
     ],
     products: [
         .library(
@@ -14,7 +14,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/apollographql/apollo-ios", "1.0.0" ..< "3.0.0"),
+        .package(url: "https://github.com/apollographql/apollo-ios", from: Version(2, 0, 0)),
         .package(url: "https://github.com/DataDome/datadome-ios-package", from: Version(3, 8, 4))
     ],
     targets: [

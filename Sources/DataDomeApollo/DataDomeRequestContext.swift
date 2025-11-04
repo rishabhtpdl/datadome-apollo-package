@@ -15,7 +15,7 @@ public protocol DataDomeRequestContext: RequestContext {
     var responsePageDelegate: CaptchaDelegate? { get }
 }
 
-public class ProtectedRequestContext: DataDomeRequestContext {
+public class ProtectedRequestContext: DataDomeRequestContext, @unchecked Sendable {
     public init(responsePageDelegate: (any CaptchaDelegate)? = nil) {
         self.responsePageDelegate = responsePageDelegate
     }

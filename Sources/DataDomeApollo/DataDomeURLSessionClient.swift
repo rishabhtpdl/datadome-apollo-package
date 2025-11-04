@@ -13,7 +13,11 @@ import ApolloAPI
 #endif
 
 /// An URLSessionClient with specific DataDome setup
-public final class DataDomeURLSessionClient: URLSessionClient {
+public final class DataDomeURLSessionClient: ApolloURLSession {
+    public func chunks(for request: URLRequest) async throws -> (any Apollo.AsyncChunkSequence, URLResponse) {
+        
+    }
+    
     public init() {
         let config = URLSessionConfiguration.default
         if let header = ProcessInfo().environment["DATADOME_USER_AGENT"] {

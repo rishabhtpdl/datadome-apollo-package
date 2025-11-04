@@ -13,6 +13,6 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/DataDome/datadome-apollo-package.git", :tag => "#{spec.version}" }
   spec.source_files = "Sources/DataDomeApollo"
 
-  spec.dependency "Apollo", "~> 1.0"
+  spec.dependency "Apollo", "~> 2.0"
   spec.dependency 'DataDomeSDK', "3.8.4"
 end
